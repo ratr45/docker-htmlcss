@@ -1,0 +1,108 @@
+ html,
+        body {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        @font-face{
+            font-family: "Segoe UI";
+            src: url('../fonts/segoeuil.ttf');
+        }
+        .main-container {
+            height: 100%;
+            width: 100%;
+            background-color: #FFFFFF
+            color: white;
+            padding-top: 6%;
+            box-sizing: border-box;
+            overflow-y: auto;
+            overflow-x: hidden;
+            font-family: "Segoe UI";
+        }
+        .success-text {
+            padding-bottom: 20px;
+            font-size: 62px;
+            line-height: 73px;
+        }
+        .content {
+            box-sizing: border-box;
+            margin-left: 50px;
+            width: 340px;
+            margin: 0 auto;
+        }
+        .content a {
+            float: left;
+            padding-top: 15px;
+        }
+        .content-body{
+            min-width: 400px;
+            color: #4A5055;
+        }
+        .img-container {
+            padding-bottom: 30px;
+            margin: 0 auto;
+            width: 250px;
+        }
+        .icon {
+            padding: 30px;
+            margin: 0 auto;
+        }
+        .content-body a img {
+            float: left;
+            padding-top: 15px;
+            padding-right: 15px;
+        }
+        .description.line-1 {
+            padding-left: 70px;
+        }
+        .form {
+            padding-left: 15px;
+            padding-bottom: 10px;
+        }
+        .part2 {
+            width: 430px;
+            height: 480px;
+            padding-left: 40px;
+            color: #4A5055;
+        }
+        .form-popup {
+          display: none;
+          position: fixed;
+          top: 0;
+          border: 150px solid #f1f1f1;
+          z-index: 9;
+        }
+        .FeedbackContent {
+            margin: 0 auto;
+            padding-top: 5px;
+            width: 350px;
+        }
+        .FeedbackTable {
+            
+            margin: 0 auto;
+            padding-left: 60px;
+        }
+        .FeedbackInput {
+            padding-bottom: 10px;
+            padding-left: 70px;
+            margin: 0 auto;
+
+        }
+        .FeedbackSubmit {
+            margin: 0 auto;
+            padding-left: 120px;
+            padding-bottom: 10px;
+        }
+        .feedback-img-container {
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+        .feedback-img {
+            margin: 0 auto;
+            width: 400px;
+            height: 320px;
+            padding-left: 75px;
+        }

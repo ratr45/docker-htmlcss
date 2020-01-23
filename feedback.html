@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feed-Back Page</title>
+	<link href="css/site.css" rel="stylesheet">
+	<style>
+		table {
+			border: 1px solid black;;
+		}
+
+	</style>
+	<script src="./config.js"></script>
+</head>
+<body>
+	<div class="feedback-img-container">
+            <img class="feedback-img" src="img/glass.gif" width="250px" height="200px" />
+        </div>
+	<div class="FeedbackContent">
+		<form  id="myForm" method="GET" action="/feedback" onsubmit="return handleSubmit(event)">
+			<div class="FeedbackInput">
+	            <input type="text"  id="token" placeholder="FeedBack token" name="id" required>
+	            <br>
+	        	</div>
+        	<div class="FeedbackSubmit">
+             	<input type="submit"  value="Submit">
+			</div>
+		</form>
+		<div class="FeedbackTable">
+		<table id="feedback_table">
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Opinion</th>
+				<th>Color</th>
+			</tr>
+		</table>
+		</div>
+			<tbody>
+
+			</tbody>
+		</table>
+	</div>
+
+	<script type="text/javascript">
+		var form = document.getElementById('myForm');
+		function handleSubmit(e) {
+			e.preventDefault();
+			var id = document.getElementById('token').value;
+			fetch(`${API}/feedback/?id=${id}`)
+				.then(data => data.json())
+				.then(data => renderFeedback(data));
+			return false;
+		}
+
+		function renderFeedback(data) {
+			const { name, email, opinion, color } = data.result;
+			let table = document.getElementById('feedback_table').getElementsByTagName('tbody')[0];
+			// document.body.style.backgroundColor = color;
+			document.bgColor = color;
+			const template = `
+			<tr>
+				<td>${name}</td>
+				<td>${email}</td>
+				<td>${opinion}</td>
+				<td>${color}</td>
+			</tr>
+			`;
+			table.innerHTML = template;
+			/*
+			let row = table.insertRow();
+			let [nameCell, emailCell, opinionCell, colorCell] = [
+				row.insertCell(0),
+				row.insertCell(1),
+				row.insertCell(2),
+				row.insertCell(3)
+			];
+			nameCell.innerHTML = name;
+			emailCell.innerHTML = email;
+			opinionCell.innerHTML = opinion;
+			colorCell.innerHTML = color;*/
+
+		}
+	</script>
+</body>
+</html>

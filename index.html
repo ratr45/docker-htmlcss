@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+     <title>HTML Application</title>
+     <link href="css/site.css" rel="stylesheet">
+     <script src="./config.js">
+     </script>
+</head>
+
+<body>
+    <div class="main-container">    
+        <div class="img-container">
+            <img class="img" src="img/deployed.gif" width="250px" height="200px" />
+        </div>
+
+        <div class="content">  
+            <a href="https://intellipaat.com/">
+                <img src="img/sun-energy.png" width="65" height="65" />
+            </a>
+            <div class="content-body">
+                <div class="success-text">Success!</div>
+                <div class="description line-1"> Docker Project has been succesfully Setup</div>
+            </div>
+            <div class="part2">
+                <h3>Enter your details here:</h3>
+                <form method="POST" action="http://13.233.227.88:3000/feedback">
+                    <div class="form">
+                      Name:<br>
+                      <input type="text" name="name" value=""><br>
+                      Email Address:<br>
+                      <input type="email" name="email" value=""><br>
+                      Color:<br>
+                      <select name="color">
+                          <option value="red">red</option>
+                          <option value="blue">blue</option>
+                          <option value="green">green</option>
+                          <option value="yellow">yellow</option>
+                      </select>
+                        <br><br>
+                    
+                        What is your opinion on the new JOKER movie?<br><br>
+                        <input type="radio" name="opinion" value="Like" checked> It was really good and I had a great time.<br>
+                        <input type="radio" name="opinion" value="Dislike"> It was bit too pretentious for me<br>
+                        <input type="radio" name="opinion" value="No strong feelings"> I have no strong feelings for it one way or the other.<br><br>
+                        <input type="submit" value="Submit" onclick="alert('You will see your feedback ID in the new page, copy it and keep it')" >
+                        </div>
+                </form>
+                <p class="ending"> To check the status of your FeedBack status enter your feedback ID :</p>
+                <a href="feedback.html">Enter FeedBack ID</a>
+                
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
