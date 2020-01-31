@@ -4,8 +4,13 @@
 <head>
      <title>HTML Application</title>
      <link href="css/site.css" rel="stylesheet">
-     <script src="./config.js">
-     </script>
+     <script type="text/javascript" src="config.js"></script>
+<script>
+	function replace(){
+document.getElementById("form_id").action = API;
+alert('You will see your feedback ID in the new page, copy it  and keep it');
+}
+</script>
 </head>
 
 <body>
@@ -43,7 +48,7 @@
                         <input type="radio" name="opinion" value="Like" checked> It was really good and I had a great time.<br>
                         <input type="radio" name="opinion" value="Dislike"> It was bit too pretentious for me<br>
                         <input type="radio" name="opinion" value="No strong feelings"> I have no strong feelings for it one way or the other.<br><br>
-                        <input type="submit" value="Submit" onclick="alert('You will see your feedback ID in the new page, copy it and keep it')" >
+                        <input type="submit" value="Submit" onclick="replace()">
                         </div>
                 </form>
                 <p class="ending"> To check the status of your FeedBack status enter your feedback ID :</p>
